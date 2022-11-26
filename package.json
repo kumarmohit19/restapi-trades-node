@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node bin/www",
+    "dev": "nodemon bin/www",
     "prestart": "npm install",
     "pretest": "npm install",
     "test": "cross-env PORT=8001 ./node_modules/.bin/mocha test --exit"
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "bluebird": "^3.7.2",
-    "cross-env": "^7.0.2"
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.20"
   }
 }

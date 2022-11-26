@@ -20,5 +20,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/trades', tradesRouter);
 app.use('/', indexRouter);
+app.use((err, req, res, next) => {
+    console.error(err)
+    res.status(err.status || 500)
+       .send(err.message || 'Something went wrong.')
+})
 
 module.exports = app;
